@@ -6,4 +6,4 @@ class AwesomeSchool(models.Model):
 
     name=fields.Char("Name")
     first = fields.Char("First")
-    last = fields.Char("Last")
+    last = fields.Char("Last1")
