@@ -8,6 +8,6 @@
 'depends': ['base'],
     'data':[
         'security/ir.model.access.csv',
-        'view/awesome_school_views.xml',
+        'views/awesome_school_views.xml',
     ]
 }
