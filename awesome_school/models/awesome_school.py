@@ -1,4 +1,4 @@
-from oddo import  models, fields
+from odoo import  models, fields
 
 class AwesomeSchool(models.Model):
     _name='awesome.school'
