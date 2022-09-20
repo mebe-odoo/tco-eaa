@@ -19,7 +19,7 @@
             </field>
 
     </record> -->
-        <record id="awesome_school_tree" model="ir.ui.view">
+        <!--<record id="awesome_school_tree" model="ir.ui.view">
         <field name="name">awesome.school.tree</field>
             <field name="model">awesome.school</field>
             <field name="arch" type="xml">
@@ -30,7 +30,7 @@
                 </tree>
             </field>
 
-    </record>
+    </record>-->
         <record id="awesome_school_action" model="ir.actions.act_window">
             <field name="name">Schools</field>
             <field name="res_model">awesome.school</field>
