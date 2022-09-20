@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <!-- creating from view -->
+    <record id="awesome_school_form" model="ir.ui.view">
+        <field name="name">awesome.school.form</field>
+        <field name="res_model">awesome.school</field>
+
+        <field name="arch" type="xml">
+            <form string="My Test Form">
+                <sheet>
+                    <group>
+                        <field name="firstname" />
+                        <field name="lastname" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <!-- creating tree view -->
+    <record id="awesome_school_view_tree" model="ir.ui.view">
+        <field name="name">awesome.school.view.tree</field>
+        <field name="res_model">awesome.school</field>
+
+        <field name="arch" type="xml">
+            <tree string="My Test Tree View">
+                <field name="firstname" />
+                <field name="lastname" />
+            </tree>
+        </field>
+    </record>
+
+
+    <!-- create window action -->
+    <record id="awesome_school_action" model="ir.actions.act_window">
+        <field name="name">Schools Action Name</field>
+        <field name="res_model">awesome.school</field>
+
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p>This is help text</p>
+        </field>
+    </record>
+
+
+    <!-- creating menuitem -->
+    <menuitem id="awesome_school_root" name="Awesome School Menu Item" action="awesome_school_action" sequence="10" />
+
+    
+</odoo>
