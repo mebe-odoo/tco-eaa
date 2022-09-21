@@ -6,32 +6,54 @@
             <field name="model">awesome.classroom</field>
             <field name="arch" type="xml">
                 <tree>
-          <field name="name" />
-          <field name="capacity" />
-          <field name="teacher_id" />
-          <field name="student_ids" />
-                    <field name="school_id"></field>
-        </tree>
+                    <field name="name"/>
+                    <field name="capacity"/>
+                    <field name="teacher_id"/>
+                    <field name="student_ids"/>
+                    <field name="school_id"/>
+                </tree>
             </field>
 
         </record>
-<!-- Window Action -->
-    <record model="ir.actions.act_window" id="awesome_school_act_window">
-      <field name="name">Awesome School</field>
-      <field name="res_model">awesome.school</field>
-      <field name="view_mode">tree,form</field>
-    </record>
+        <record model="ir.ui.view" id="awesome_classroom_form">
+            <field name="name">awesome.classroom.form</field>
+            <field name="model">awesome.classroom</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="capacity"/>
+                                <field name="teacher_id"/>
+                                <field name="student_ids"/>
+                                <field name="school_id"/>
 
-    <!-- Window Action -->
-    <record model="ir.actions.act_window" id="awesome_classroom_act_window">
-      <field name="name">Awesome Classroom</field>
-      <field name="res_model">awesome.classroom</field>
-      <field name="view_mode">tree,form</field>
-    </record>
+                            </group>
+                        </group>
+                    </sheet>
 
-    <!-- Top menu item -->
-    <menuitem name="Awesome School" id="awesome_school_menu_root" action="awesome_school_act_window" />
-    <menuitem name="Awesome Classroom" id="awesome_classroom_menu_root" action="awesome_classroom_act_window" />
+                </form>
+            </field>
+
+        </record>
+        <!-- Window Action -->
+        <record model="ir.actions.act_window" id="awesome_school_act_window">
+            <field name="name">Awesome School</field>
+            <field name="res_model">awesome.school</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Window Action -->
+        <record model="ir.actions.act_window" id="awesome_classroom_act_window">
+            <field name="name">Awesome Classroom</field>
+            <field name="res_model">awesome.classroom</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Top menu item -->
+        <menuitem name="Awesome School" id="awesome_school_menu_root" action="awesome_school_act_window"/>
+        <menuitem name="Awesome Classroom" id="awesome_classroom_menu_root" action="awesome_classroom_act_window"/>
 
 
     </data>
