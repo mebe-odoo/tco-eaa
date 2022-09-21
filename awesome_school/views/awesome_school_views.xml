@@ -74,8 +74,16 @@
       <field name="view_mode">tree,form</field>
     </record>
 
+    <!-- Window Action -->
+    <record model="ir.actions.act_window" id="awesome_classroom_act_window">
+      <field name="name">Awesome Classroom</field>
+      <field name="res_model">awesome.classroom</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
     <!-- Top menu item -->
     <menuitem name="Awesome School" id="awesome_school_menu_root" action="awesome_school_act_window" />
+    <menuitem name="Awesome Classroom" id="awesome_classroom_menu_root" action="awesome_classroom_act_window" />
 
   </data>
 </odoo>
