@@ -11,8 +11,27 @@
             <form string="My Test Form">
                 <sheet>
                     <group>
-                        <field name="firstname" />
-                        <field name="lastname" />
+                        <group>
+                            <field name="name" />
+                            <field name="supervisor_id" />
+                            <field name="teacher_id" />
+                            <field name="establishment_date" />
+                        </group>
+
+                        <group>
+                            <field name="country" />
+                            <field name="state" />
+                            <field name="city" />
+
+                            <field name="street" />
+                            <field name="street_2" />
+                            <field name="zip" />
+                        </group>
+
+                        <group>
+                            <field name="classroom_ids" />
+                            <field name="students_ids" />
+                        </group>
                     </group>
                 </sheet>
             </form>
@@ -27,8 +46,20 @@
 
         <field name="arch" type="xml">
             <tree string="My Test Tree View">
-                <field name="firstname" />
-                <field name="lastname" />
+                <field name="name" />
+                <field name="supervisor_id" />
+                <field name="teacher_id" />
+                <field name="establishment_date" />
+
+                <field name="country" />
+                <field name="state" />
+                <field name="city" />
+
+                <field name="street" />
+                <field name="street_2" />
+                <field name="zip" />
+                <field name="classroom_ids" />
+                <field name="students_ids" />
             </tree>
         </field>
     </record>
@@ -51,5 +82,5 @@
     <!-- creating menuitem -->
     <menuitem id="awesome_school_root" name="Awesome School Menu Item" action="awesome_school_action" sequence="10" />
 
-    
+
 </odoo>
