@@ -14,4 +14,4 @@ class AwesomeSchool(models.Model):
     zip=fields.Char("Zip Code")
     state_id=fields.Many2one("res.country.state","State", required=True)
     country_id=fields.Many2one("res.country","Country",required=True)
-    classroom_ids=fields.Many2one("awesome.classroom",string="Classrooms")
+    classroom_ids=fields.One2Many("awesome.classroom","school_id",string="Classrooms")
