@@ -83,7 +83,7 @@
         </record>
 
         <!-- Top menu item -->
-        <menuitem name="Awesome School" id="awesome_school_menu_root"  parent="awesome_school_menu_root" action="awesome_school_act_window"/>
+        <menuitem name="Awesome School" id="awesome_school_menu_root"  parent="awesome_school_menu_root" action="awesome_school_act_window" sequence="0"/>
         <menuitem name="Awesome Classroom" id="awesome_classroom_menu_root" parent="awesome_school_menu_root" action="awesome_classroom_act_window"/>
 
     </data>
