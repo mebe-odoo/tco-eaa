@@ -1,4 +1,4 @@
-from odoo import  models, fields
+from odoo import  models, fields, api
 
 class AwesomeSchool(models.Model):
     _name='awesome.school'
