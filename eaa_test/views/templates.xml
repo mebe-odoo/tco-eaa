@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="eaa_template">
+        <h1>Hello World</h1>
+    </template>
+
+
+    <template id="eaa_template_2" inherit_id="eea_test.eaa_template">
+        <xpath expr="//h1" position="after">
+            <p>
+                This is an inherited template
+            </p>
+        </xpath>
+    </template>
+
+</odoo>

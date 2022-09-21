@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="test_model_line_ali" model="test.model.line">
+            <field name="name">Test XML</field>
+            <field name="price">650</field>
+        </record>
+
+        <record id="test_model_ali" model="test.model">
+            <field name="name">Test XML</field>
+            <field name="firstname">Ali</field>
+            <field name="lastname">Mubarak</field>
+            <field name="age">20</field>
+            <field name="partner_id" eval="3"/>
+            <field name="line_ids" eval="[]"/>
+        </record>
+
+    </data>
+</odoo>

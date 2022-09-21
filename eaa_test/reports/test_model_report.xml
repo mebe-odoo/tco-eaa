@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="custom_paperformat" model="report.paperformat">
+            <field name="name">200x200 Paper</field>
+            <field name="default" eval="True"/>
+            <field name="format">A200</field>
+            <field name="orientation">Landscape</field>
+            <field name="page_height">200</field>
+            <field name="page_width">200</field>
+            <field name="margin_top">0</field>
+            <field name="margin_bottom">0</field>
+            <field name="margin_left">0</field>
+            <field name="margin_right">0</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">0</field>
+            <field name="disable_shrinking" eval="True"/>
+            <field name="dpi">96</field>
+            <field name="format">custom</field>
+        </record>
+
+        <record id="test_model_report" model="ir.actions.report">
+            <field name="name">Test Model Report</field>
+            <field name="model">test.model</field>
+            <field name="binding_model_id" ref="model_test_model"/>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">eaa_test.test_model_report_document</field>
+            <field name="report_file">eaa_test.test_model_report_document</field>
+            <field name="print_report_name">'test.pdf'</field>
+            <field name="binding_type">report</field>
+            <field name="paperformat_id" ref="custom_paperformat"/>
+            <field name="groups_id" eval="[(4, ref('eaa_test.test_model_managers_group'))]"/>
+        </record>
+
+        <template id="test_model_report_document">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="web.external_layout">
+
+                        <div class="page">
+                            <h1>Hello World</h1>
+                            <h2>Hello World</h2>
+                        </div>
+
+                    </t>
+                </t>
+            </t>
+        </template>
+
+    </data>
+</odoo>

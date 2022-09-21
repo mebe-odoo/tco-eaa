@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="module_category_eaa_test" model="ir.module.category">
+            <field name="name">EAA Test</field>
+            <field name="description">Group for the EAA Test module</field>
+            <field name="sequence">200</field>
+        </record>
+
+    </data>
+</odoo>
