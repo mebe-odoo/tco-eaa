@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="awesome_classroom_tree">
+            <field name="name">awesome.classroom.tree</field>
+            <field name="model">awesome.classroom</field>
+            <field name="arch" type="xml">
+                <tree>
+          <field name="name" />
+          <field name="capacity" />
+          <field name="teacher_id" />
+          <field name="student_ids" />
+                    <field name="school_id"></field>
+        </tree>
+            </field>
+
+        </record>
+<!-- Window Action -->
+    <record model="ir.actions.act_window" id="awesome_school_act_window">
+      <field name="name">Awesome School</field>
+      <field name="res_model">awesome.school</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Window Action -->
+    <record model="ir.actions.act_window" id="awesome_classroom_act_window">
+      <field name="name">Awesome Classroom</field>
+      <field name="res_model">awesome.classroom</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Top menu item -->
+    <menuitem name="Awesome School" id="awesome_school_menu_root" action="awesome_school_act_window" />
+    <menuitem name="Awesome Classroom" id="awesome_classroom_menu_root" action="awesome_classroom_act_window" />
+
+
+    </data>
+</odoo>

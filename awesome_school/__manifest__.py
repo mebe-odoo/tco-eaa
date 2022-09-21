@@ -9,5 +9,6 @@
     'data':[
         'security/ir.model.access.csv',
         'views/awesome_school_views.xml',
+        'views/awesome_classroom_views.xml',
     ]
 }
