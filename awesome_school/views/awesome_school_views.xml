@@ -1,42 +1,80 @@
-<?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-    <data noupdate="1">
-    <!--<record id="awesome_school_form" model="ir.ui.view">
-        <field name="name">awesome.school.form</field>
-            <field name="model">awesome.school</field>
-            <field name="arch" type="xml">
-                <form>
+  <data>
+
+    <!-- Tree View definition -->
+    <record model="ir.ui.view" id="awesome_school_tree">
+      <field name="name">awesome.school.tree</field>
+      <field name="model">awesome.school</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name" />
+          <field name="supervisor_id" />
+          <field name="establishment_date" />
+          <field name="country_id" />
+        </tree>
+      </field>
+    </record>
+
+    <!-- Form View definition -->
+    <record model="ir.ui.view" id="awesome_school_form">
+      <field name="name">awesome.school.form</field>
+      <field name="model">awesome.school</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <group>
+                <field name="name" />
+                <field name="supervisor_id" />
+                <field name="establishment_date" attrs="{'invisible': [('supervisor_id', '=', False)]}" />
+              </group>
+            </group>
+            <group string="Address">
+              <group>
+                <field name="street" />
+                <field name="city" />
+                <field name="country_id" />
+              </group>
+              <group>
+                <field name="street2" attrs="{'readonly': [('street', '=', '')]}" />
+                <field name="zip" attrs="{'readonly': [('city', '=', '')]}" />
+                <field name="state_id" attrs="{'readonly': [('country_id', '=', False)]}" />
+              </group>
+            </group>
+            <notebook>
+              <page string="Classrooms">
+                <field name="classroom_ids">
+                  <tree editable="bottom">
+                    <field name="name" />
+                    <field name="teacher_id" />
+                  </tree>
+                  <form>
                     <sheet>
+                      <group>
                         <group>
-                            <group>
-                                <field name="name" />
-                                <field name="first" />
-                                <field name="last" />
-                            </group>
+                          <field name="name" />
+                          <field name="teacher_id" />
                         </group>
+                      </group>
                     </sheet>
-                </form>
-            </field>
+                  </form>
+                </field>
+              </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
 
-    </record> -->
-        <!--<record id="awesome_school_tree" model="ir.ui.view">
-        <field name="name">awesome.school.tree</field>
-            <field name="model">awesome.school</field>
-            <field name="arch" type="xml">
-                <tree string="Schools">
-                                <field name="name" />
-                                <field name="first" />
-                                <field name="last" />
-                </tree>
-            </field>
+    <!-- Window Action -->
+    <record model="ir.actions.act_window" id="awesome_school_act_window">
+      <field name="name">Awesome School</field>
+      <field name="res_model">awesome.school</field>
+      <field name="view_mode">tree,form</field>
+    </record>
 
-    </record>-->
-        <record id="awesome_school_action" model="ir.actions.act_window">
-            <field name="name">Schools</field>
-            <field name="res_model">awesome.school</field>
+    <!-- Top menu item -->
+    <menuitem name="Awesome School" id="awesome_school_menu_root" action="awesome_school_act_window" />
 
-        </record>
-        <menuitem id="awesome_school_root" name="Awesome School" action="awesome_school_action" />
-    </data>
-
+  </data>
 </odoo>

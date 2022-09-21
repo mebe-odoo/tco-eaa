@@ -1,1 +1,1 @@
-from .import awesome_school
+from .import awesome_school, awesome_classroom
