@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="reality_tenancy_form_view" model="ir.ui.view">
+            <field name="name">RealityManagement.reality_tenancy.form</field>
+            <field name="model">RealityManagement.reality_tenancy</field>
+            <field name="arch" type="xml">
+                <form string="Tenancy">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="property_id"/>
+                            </group>
+                            <group>
+                                <field name="tenant_id"/>
+                            </group>
+                            <group>
+                                <field name="contract_name"/>
+                            </group>
+                            <group>
+                                <field name="start_date"/>
+                            </group>
+                            <group>
+                                <field name="end_date"/>
+                            </group>
+                             <group>
+                                <field name="state"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="reality_tenancy_tree_view" model="ir.ui.view">
+            <field name="name">RealityManagement.reality_tenancy.tree</field>
+            <field name="model">RealityManagement.reality_tenancy</field>
+            <field name="arch" type="xml">
+                <tree string="ModelTitle">
+                    <field name="property_id"/>
+                    <field name="tenant_id"/>
+                    <field name="contract_name"/>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="reality_tenancy_act_window" model="ir.actions.act_window">
+            <field name="name">Tenancy</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">RealityManagement.reality_tenancy</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Hello from Tenancy
+                </p>
+            </field>
+        </record>
+
+        <menuitem name="Tenancy" id="reality_tenancy_menu" parent="reality_property_menu" action="reality_tenancy_act_window"/>
+
+    </data>
+</odoo>

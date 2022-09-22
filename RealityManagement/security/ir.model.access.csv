@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_reality_property,access_reality_property,model_RealityManagement_reality_property,base.group_user,1,1,1,1
+access_reality_rooms,access_reality_rooms,model_RealityManagement_reality_rooms,base.group_user,1,1,1,1
+access_reality_tenancy,access_reality_tenancy,model_RealityManagement_reality_tenancy,base.group_user,1,1,1,1
+access_reality_tenancy_lines,access_reality_tenancy_lines,model_RealityManagement_reality_tenancy_lines,base.group_user,1,1,1,1
+access_reality_tenants,access_reality_tenants,model_RealityManagement_reality_tenants,base.group_user,1,1,1,1

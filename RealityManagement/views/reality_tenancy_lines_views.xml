@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="reality.tenancy_lines_form_view" model="ir.ui.view">
+            <field name="name">RealityManagement.reality.tenancy_lines.form</field>
+            <field name="model">RealityManagement.reality.tenancy_lines</field>
+            <field name="arch" type="xml">
+                <form string="Tenancy Lines">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="product"/>
+                            </group>
+                            <group>
+                                <field name="quantity"/>
+                            </group>
+                             <group>
+                                <field name="price"/>
+                            </group>
+                             <group>
+                                <field name="total_amount"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="reality.tenancy_lines_tree_view" model="ir.ui.view">
+            <field name="name">RealityManagement.reality.tenancy_lines.tree</field>
+            <field name="model">RealityManagement.reality.tenancy_lines</field>
+            <field name="arch" type="xml">
+                <tree string="Tenancy Lines">
+                    <field name="product"/>
+                    <field name="quantity"/>
+                    <field name="price"/>
+                    <field name="total_amount"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="reality.tenancy_lines_act_window" model="ir.actions.act_window">
+            <field name="name">TenancyLines</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">RealityManagement.reality.tenancy_lines</field>
+            <field name="view_type">tree</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Hello from tenancy lines
+                </p>
+            </field>
+        </record>
+
+        <menuitem name="Tenancy Lines" id="reality.tenancy_lines_menu" parent="reality.tenancy_menu" action="reality.tenancy_lines_act_window"/>
+
+    </data>
+</odoo>

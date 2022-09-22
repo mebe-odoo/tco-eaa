@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="reality_tenants_form_view" model="ir.ui.view">
+            <field name="name">RealityManagement.reality_tenants.form</field>
+            <field name="model">RealityManagement.reality_tenants</field>
+            <field name="arch" type="xml">
+                <form string="Tenants">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                            </group>
+                            <group>
+                                <field name="phone"/>
+                            </group>
+                            <group>
+                                <field name="email"/>
+                            </group>
+                            <group>
+                                <field name="date_of_birth"/>
+                            </group>
+                            <group>
+                                <field name="place_of_birth"/>
+                            </group>
+                            <group>
+                                <field name="nationality"/>
+                            </group>
+                            <group>
+                                <field name="street"/>
+                                <field name="city"/>
+                                <field name="zip"/>
+                                <field name="state_id"/>
+                                <field name="country_id"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="reality_tenants_tree_view" model="ir.ui.view">
+            <field name="name">RealityManagement.reality_tenants.tree</field>
+            <field name="model">RealityManagement.reality_tenants</field>
+            <field name="arch" type="xml">
+                <tree string="ModelTitle">
+                    <field name="name"/>
+                    <field name="phone"/>
+                    <field name="email"/>
+                    <field name="date_of_birth"/>
+                    <field name="place_of_birth"/>
+                    <field name="nationality"/>
+                    <field name="street"/>
+                    <field name="city"/>
+                    <field name="zip"/>
+                    <field name="state_id"/>
+                    <field name="country_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="reality_tenants_act_window" model="ir.actions.act_window">
+            <field name="name">Tenants</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">RealityManagement.reality_tenants</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Hello from Tenants
+                </p>
+            </field>
+        </record>
+
+        <menuitem name="Tenants" id="reality_tenants_menu" parent="reality_property_menu" action="reality_tenants_act_window"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="reality_property_form_view" model="ir.ui.view">
+            <field name="name">RealityManagement.reality_property.form</field>
+            <field name="model">RealityManagement.reality_property</field>
+            <field name="arch" type="xml">
+                <form string="Property">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                            </group>
+                            <group>
+                                <field name="construction_date"/>
+                            </group>
+                             <group>
+                                <field name="rent"/>
+                            </group>
+                             <group>
+                                <field name="parking_slots"/>
+                            </group>
+                             <group>
+                                <field name="Surface"/>
+                            </group>
+                             <group>
+                                <field name="furnishing"/>
+                            </group>
+                             <group>
+                                <field name="street"/>
+                                 <field name="city"/>
+                                 <field name="zip"/>
+                                 <field name="state_id"/>
+                                 <field name="country_id"/>
+                            </group>
+                            <group>
+                                <field name="available_for_rent"/>
+                            </group>
+                             <group>
+                                <field name="is_rented"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="reality_property_tree_view" model="ir.ui.view">
+            <field name="name">RealityManagement.reality_property.tree</field>
+            <field name="model">RealityManagement.reality_property</field>
+            <field name="arch" type="xml">
+                <tree string="Property">
+                    <field name="name"/>
+                    <field name="construction_date"/>
+                    <field name="rent"/>
+                    <field name="parking_slots"/>
+                    <field name="surface"/>
+                    <field name="furnishing"/>
+                    <field name="street"/>
+                    <field name="city"/>
+                    <field name="zip"/>
+                    <field name="state_id"/>
+                    <field name="country_id"/>
+                    <field name="available_for_rent"/>
+                    <field name="is_rented"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="reality_property_act_window" model="ir.actions.act_window">
+            <field name="name">Property</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">RealityManagement.reality_property</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Hello from Property
+                </p>
+            </field>
+        </record>
+
+        <menuitem name="Property" id="reality_property_menu"  action="reality_property_act_window"/>
+
+    </data>
+</odoo>
